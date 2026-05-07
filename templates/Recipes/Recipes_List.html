@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="header">
+    <h1>Recipes List <i class="fa-solid fa-utensils"></i></h1>
+    <p>Explore our delicious recipes added by our chefs</p>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px;">
+    {% for recipe in all_recipes %}
+    <div class="recipe-card" style="background: white; border-radius: 15px; width: 300px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+        {% if recipe.image %}
+            <img src="{{ recipe.image.url }}" style="width: 100%; height: 200px; object-fit: cover;">
+        {% endif %}
+        <div style="padding: 15px;">
+            <h2 style="color: #561c24;">{{ recipe.name }}</h2>
+            <span style="background: #c7b7a3; color: white; padding: 2px 10px; border-radius: 10px; font-size: 12px;">{{ recipe.course }}</span>
+            <p style="margin-top: 10px; font-size: 14px;">{{ recipe.description|truncatewords:20 }}</p>
+            
+            <h5 style="margin-top: 10px; color: #561c24;">Ingredients:</h5>
+            <ul style="font-size: 13px;">
+                {% for ing in recipe.ingredients.all %}
+                    <li>{{ ing.name }} - {{ ing.quantity }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% empty %}
+        <p style="color: white;">No recipes added yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

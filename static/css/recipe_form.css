@@ -1,0 +1,6 @@
+.form-container { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); max-width: 700px; margin: auto; }
+h1 { color: #FFF5E1; text-align: center; margin-bottom: 20px; font-family: 'lucida calligraphy', cursive; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+label { display: block; color: #561c24; font-weight: bold; margin: 10px 0 5px; }
+input[type="text"], textarea, select { width: 100%; padding: 12px; border: 1px solid #C7B7A3; border-radius: 10px; }
+.btn-submit { background: #561c24; color: white; padding: 15px; border: none; border-radius: 25px; cursor: pointer; width: 100%; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+.btn-submit:hover { background: #8c3a45; transform: scale(1.02); }

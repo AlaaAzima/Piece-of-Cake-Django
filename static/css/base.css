@@ -1,0 +1,9 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { 
+    background: linear-gradient(to right, #c7b7a3, #561c24); 
+    font-family: Arial, sans-serif; 
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+.container { max-width: 1100px; margin: 30px auto; padding: 20px; flex: 1; }

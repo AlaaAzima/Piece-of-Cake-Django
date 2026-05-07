@@ -1,0 +1,10 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+<nav>
+    <img src="{% static 'Cake_Logo.png' %}" alt="Logo">
+    <div class="nav-links">
+        <a href="{% url 'recipe_list' %}">Home</a>
+        <a href="{% url 'recipe_list' %}">Recipes List</a>
+       
+    </div>
+</nav>

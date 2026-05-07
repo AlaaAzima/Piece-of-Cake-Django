@@ -1,0 +1,7 @@
+.recipes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; list-style: none; }
+.recipe-card { background: white; border-radius: 20px; overflow: hidden; padding: 15px; text-align: center; transition: 0.3s; }
+.recipe-card:hover { transform: translateY(-10px); }
+.recipe-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 15px; }
+.recipe-card h3 { margin: 15px 0 5px; color: #561c24; }
+.category-badge { background: #e8D8C4; color: #561c24; padding: 5px 10px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+.edit-link { display: inline-block; margin-top: 15px; color: #8c3a45; text-decoration: none; font-weight: bold; font-size: 14px; }
