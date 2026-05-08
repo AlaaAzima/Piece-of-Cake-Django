@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="auth-box">
+    <h2>Sign Up</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
+        
+        <label for="role">Choose your role:</label>
+        <select name="role" id="role" required>
+            <option value="user">Regular User (Favorite Recipes)</option>
+            <option value="admin">Admin (Manage Recipes)</option>
+        </select>
+
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+        
+        <button type="submit">Create Account</button>
+    </form>
+</div>
+{% endblock %}
